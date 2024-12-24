@@ -24,6 +24,7 @@ public class Room {
     private BigDecimal roomPrice;
     private boolean isBooked = false;
     @Lob
+    @Column(columnDefinition = "BLOB")
     private Blob photo;
 
 
