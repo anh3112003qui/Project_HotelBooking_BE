@@ -3,7 +3,6 @@ package com.anh3112003qui.quile_hotel.repository;
 import com.anh3112003qui.quile_hotel.model.Room;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

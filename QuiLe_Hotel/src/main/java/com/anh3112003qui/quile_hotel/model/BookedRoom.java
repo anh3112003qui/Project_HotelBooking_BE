@@ -13,23 +13,21 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class BookedRoom {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long bookingId;
+    private  Long bookingId;
 
-    @Column(name = "check_In")
+    @Column(name = "check_in")
     private LocalDate checkInDate;
 
-    @Column(name = "check_Out")
+    @Column(name = "check_out")
     private LocalDate checkOutDate;
 
-    @Column(name = "Guest_FullName")
+    @Column(name = "guest_fullName")
     private String guestFullName;
 
-    @Column(name = "Guest_Email")
+    @Column(name = "guest_email")
     private String guestEmail;
 
     @Column(name = "adults")
@@ -48,7 +46,7 @@ public class BookedRoom {
     @JoinColumn(name = "room_id")
     private Room room;
 
-    public void calculateTotalNumberOfGuest() {
+    public void calculateTotalNumberOfGuest(){
         this.totalNumOfGuest = this.NumOfAdults + NumOfChildren;
     }
 
@@ -65,10 +63,4 @@ public class BookedRoom {
     public void setBookingConfirmationCode(String bookingConfirmationCode) {
         this.bookingConfirmationCode = bookingConfirmationCode;
     }
-
-    public void setRoom(Room room) {
-        this.room = room;
-    }
-
-
 }
