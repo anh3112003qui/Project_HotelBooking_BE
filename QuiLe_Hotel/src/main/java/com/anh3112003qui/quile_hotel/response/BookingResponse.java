@@ -1,10 +1,5 @@
 package com.anh3112003qui.quile_hotel.response;
 
-import com.anh3112003qui.quile_hotel.model.Room;
-import jakarta.persistence.Column;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,5 @@
 package com.anh3112003qui.quile_hotel.response;
 
-import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
