@@ -24,7 +24,7 @@ public class UserService implements IUserService {
     @Override
     public User registerUser(User user) {
         if (userRepository.existsByEmail(user.getEmail())){
-            throw new UserAlreadyExistsException(user.getEmail() + "Đã tồn tại");
+            throw new UserAlreadyExistsException(user.getEmail() + "Da ton tai");
         }
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         System.out.println(user.getPassword());
