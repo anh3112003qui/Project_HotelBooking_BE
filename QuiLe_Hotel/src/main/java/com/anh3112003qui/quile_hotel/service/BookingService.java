@@ -40,7 +40,7 @@ public class BookingService implements IBookingService {
     @Override
     public String saveBooking(Long roomId, BookedRoom bookingRequest) {
         if (bookingRequest.getCheckOutDate().isBefore(bookingRequest.getCheckInDate())){
-            throw new InvalidBookingRequestException("Ngày checkin phải trước ngày checkout");
+            throw new InvalidBookingRequestException("Ngày nhận phòng phải trước ngày trả phòng!");
         }
         Room room = roomService.getRoomById(roomId).get();
         List<BookedRoom> existingBookings = room.getBookings();
@@ -49,7 +49,7 @@ public class BookingService implements IBookingService {
             room.addBooking(bookingRequest);
             bookingRepository.save(bookingRequest);
         }else{
-            throw  new InvalidBookingRequestException("Xin lỗi, phòng này không còn phù hợp trong ngày bạn đặt");
+            throw  new InvalidBookingRequestException("Xin lỗi, phòng này không còn phù hợp trong ngày bạn đặt!");
         }
         return bookingRequest.getBookingConfirmationCode();
     }

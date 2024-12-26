@@ -50,6 +50,6 @@ public class UserService implements IUserService {
     @Override
     public User getUser(String email) {
         return userRepository.findByEmail(email)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+                .orElseThrow(() -> new UsernameNotFoundException("Không tìm thấy tài khoản"));
     }
 }
